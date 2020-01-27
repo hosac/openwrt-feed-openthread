@@ -1,0 +1,23 @@
+--- a/src/util/tunnel.c
++++ b/src/util/tunnel_mod.c
+@@ -36,11 +36,8 @@
+ #include "tunnel.h"
+ #include "string-utils.h"
+ #include <syslog.h>
+-#include <fcntl.h>
+ #include <errno.h>
+ #include <string.h>
+-#include <netinet/in.h>
+-#include <net/if.h>
+ #include <sys/ioctl.h>
+ #include <unistd.h>
+ 
+@@ -53,6 +50,8 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <net/route.h> // AF_ROUTE things
++#include <sys/socket.h>
++#include <linux/if.h>
+ 
+ #ifdef __APPLE__
+ #include <netinet6/in6_var.h>

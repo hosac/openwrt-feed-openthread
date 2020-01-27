@@ -1,0 +1,20 @@
+--- a/src/util/netif-mgmt.c
++++ b/src/util/netif-mgmt.c
+@@ -38,8 +38,6 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <string.h>
+-#include <netinet/in.h>
+-#include <net/if.h>
+ #include <sys/ioctl.h>
+ #include <unistd.h>
+ 
+@@ -52,6 +50,8 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <net/route.h> // AF_ROUTE things
++#include <sys/socket.h>
++#include <linux/if.h>
+ 
+ #ifdef __APPLE__
+ #include <netinet6/in6_var.h>

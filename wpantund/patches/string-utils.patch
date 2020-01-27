@@ -1,0 +1,10 @@
+--- a/src/util/string-utils.h
++++ b/src/util/string-utils.h
+@@ -29,6 +29,7 @@
+ #include <string.h>
+ #include <stdbool.h>
+ #include <sys/cdefs.h>
++#include <strings.h>
+ 
+ #define strcaseequal(x, y)   (strcasecmp(x, y) == 0)
+ #define strncaseequal(x, y, n)   (strncasecmp(x, y, n) == 0)
