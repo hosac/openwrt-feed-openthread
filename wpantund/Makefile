@@ -1,3 +1,5 @@
+# https://github.com/hosac | hosac@gmx.net
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openthread-wpantund

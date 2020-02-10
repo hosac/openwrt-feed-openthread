@@ -1,17 +1,11 @@
-<h3> OpenThread Wpantund </h3>
+<h3> openthread-wpantund </h3>
 
-This folder provides the wpantund package for OpenWrt.
-https://github.com/openthread/wpantund
+This folder provides the https://github.com/openthread/wpantund package. Inspired by https://github.com/NordicPlayground/thread_border_router_feeds
 
-<h4> Install </h4>
-
-- Add this feed to your feeds.conf
-- Update/install feed
-- Enable package "openthread-wpantund" in make menuconfig
-
+</br>
 <h4> Dependencies </h4>
 
-Currently Openwrt 19.07 provides boost v1.71, which does not work out of the box together with wpantund. 
+In January 2020 Openwrt 19.07 provides boost library in v1.71, which does not work out of the box together with wpantund. 
 Workaround:
 
 - Update and install your feeds
@@ -19,8 +13,14 @@ Workaround:
 - Erase /feeds/packages/libs/boost/* and copy the makefile and folder incl. patches.
 - Erase the /tmp folder and run "make menuconfig" again, otherwise the change will not work.
 
+</br>
 <h4> Configuration </h4>
 
-- Edit "/etc/wpantund.conf" to modify the settings.
+- Edit "/etc/wpantund.conf" to modify the settings you want.
+
+</br>
+<h4> Notes </h4>
+
+- The package does not provide autostart or init.d script - please use it manually in terminal
 - Execute "wpantund" on target platform for start.
 - If wpantund is running "wpanctl" is also executable.
