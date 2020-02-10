@@ -1,10 +1,35 @@
-<h3> OpenThread </h3>
-My playground for OpenThread on OpenWrt.
+<img src="https://www.gstatic.com/devrel-devsite/prod/v172e5dffd78b32f4b12f8112b00e940d4993af48229fac5346097b33edb0f543/openthread/images/lockup.svg" width="250" title="OpenThread Image">
 
-Official pages:
-https://openthread.io/
-https://github.com/openthread
+This repository is based on the OpenThread project https://openthread.io and https://github.com/openthread with focus on OpenWrt.
+</br>
+<h4> Add feeds </h4>
 
-<h4> Packages </h4>
+Edit your "feeds.conf" and add
 
-- wpantund (please find Readme.md in dedicated folder)
+	src-git openthread https://github.com/hosac/openwrt-feed-openthread.git
+
+Update and install
+
+	./scripts/feeds update openthread
+	./scripts/feeds install -a -p openthread
+	
+</br>
+<h4> Available packages for build system</h4>
+
+(Please find Readme.md in dedicated folders)
+
+
+
+	make menuconfig
+
+Choose the packages you need in "Network" section
+	
+	> Network
+		> openthread-wpantund (single application, independent from otbrposix)
+		> openthread-otbrposix (single application, independent from wpantund)
+
+
+
+
+
+
