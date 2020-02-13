@@ -16,7 +16,7 @@ define Package/openthread-otbrposix
 	SECTION:=base
 	CATEGORY:=Network
 	TITLE:=OpenThread border router
-	DEPENDS:=+libjson-c +libubox +libubus +libblobmsg-json +dbus +libstdcpp +libreadline +kmod-usb-acm +kmod-tun +kmod-ieee802154_6lowpan +kmod-mac802154
+	DEPENDS:=+libjson-c +libubox +libubus +libblobmsg-json +avahi-dbus-daemon +libstdcpp +libreadline +kmod-usb-acm +kmod-tun +kmod-ieee802154_6lowpan +kmod-mac802154
 endef
 
 define Package/openthread-otbrposix/description
